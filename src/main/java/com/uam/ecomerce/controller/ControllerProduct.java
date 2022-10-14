@@ -4,10 +4,7 @@ import com.uam.ecomerce.model.Product;
 import com.uam.ecomerce.service.IServiceProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,15 +23,18 @@ public class ControllerProduct {
     }
 
 
-    public String insertProduct() {
-        return null;
+    @PostMapping("/save")
+    public Product saveProduct(@RequestBody Product product) {
+        return service.saveProduct(product);
     }
 
-    public Product getProduct() {
-       return null;
+    @GetMapping({"/{id}"})
+    public Product getProduct(@PathVariable Long id) {
+       return service.findById(id);
     }
 
-    public void deleteProduct() {
-
+    @DeleteMapping("/delete/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        service.deleteProduct(id);
     }
 }

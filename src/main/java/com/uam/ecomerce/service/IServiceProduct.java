@@ -9,4 +9,12 @@ import java.util.List;
 public interface IServiceProduct {
 
     public List<Product> getListProduct();
+
+
+    public Product findById(Long id);
+
+    public Product saveProduct(Product product);
+
+
+    public void deleteProduct(Long id);
 }

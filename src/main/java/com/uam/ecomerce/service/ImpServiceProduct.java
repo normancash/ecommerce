@@ -19,4 +19,21 @@ public class ImpServiceProduct implements IServiceProduct{
     public List<Product> getListProduct() {
         return repo.findAll();
     }
+
+    @Override
+    public Product findById(Long id) {
+        return repo.findById(id).get();
+    }
+
+    @Override
+    public Product saveProduct(Product product) {
+        return repo.save(product);
+    }
+
+    @Override
+    public void deleteProduct(Long id) {
+        repo.deleteById(id);
+    }
+
+
 }
