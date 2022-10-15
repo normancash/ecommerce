@@ -3,9 +3,11 @@ package com.uam.ecomerce.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
+@Table(name="Orders")
 public class Order {
 
     @Id
@@ -19,4 +21,8 @@ public class Order {
     private String name;
 
     private double total;
+
+    @OneToMany(mappedBy = "order")
+    private List<DetalleOrder> detalles;
+
 }
