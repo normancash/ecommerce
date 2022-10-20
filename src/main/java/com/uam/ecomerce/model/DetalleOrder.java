@@ -1,6 +1,7 @@
 package com.uam.ecomerce.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,6 +22,12 @@ public class DetalleOrder {
 
     private int count;
 
+
+   // private Long idOrder;
+
+    @ManyToOne
+    @JoinColumn(name="id_order")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Order order;
 
 
