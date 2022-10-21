@@ -2,7 +2,9 @@ package com.uam.ecomerce.service;
 
 import com.uam.ecomerce.model.Product;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -13,8 +15,8 @@ public interface IServiceProduct {
 
     public Product findById(Long id);
 
-    public Product saveProduct(Product product);
-
+     Product saveProduct(String productDto, MultipartFile image)
+            throws IOException;
 
     public void deleteProduct(Long id);
 }
