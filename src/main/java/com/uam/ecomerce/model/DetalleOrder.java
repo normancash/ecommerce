@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -16,9 +17,9 @@ public class DetalleOrder {
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "detalle_seq")
-    private Long id;
+    private UUID id_detalle_order;
 
-    private Long idProducto;
+    private Long id_Producto;
 
     private int count;
 

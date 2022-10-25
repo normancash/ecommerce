@@ -9,16 +9,17 @@ import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity
-@Table(name="users")
+@Table(name="catologo")
 @Data
-public class User {
+public class Catologo {
 
     @Id
     @GeneratedValue
-    private UUID id_usuario;
+    private UUID id_catalogo;
 
-    private String email;
-    private String login;
-    private boolean status;
-    private String password;
+    private String categoria;
+    private String descripcion;
+    private String imagen;
+    private int precio;
+    private int stock;
 }

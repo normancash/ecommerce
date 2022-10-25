@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -16,7 +17,7 @@ public class Order {
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "order_seq")
-    private Long id;
+    private UUID id_order;
 
     private String name;
 
