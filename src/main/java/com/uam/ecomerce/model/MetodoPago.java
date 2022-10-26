@@ -2,10 +2,7 @@ package com.uam.ecomerce.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -14,7 +11,11 @@ import java.util.UUID;
 public class MetodoPago {
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name = "detalle_seq",
+            sequenceName = "detalle_seq",
+            allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "detalle_seq")
     private UUID id_metodo_pago;
 
     private String credito;
