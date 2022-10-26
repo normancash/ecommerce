@@ -9,11 +9,13 @@ import com.uam.ecomerce.repository.IPedidoRepo;
 import com.uam.ecomerce.repository.IRolRepo;
 import com.uam.ecomerce.repository.IUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Component("servicePedido")
 public class ImpServicePedido implements IServicePedido {
 
     @Autowired
