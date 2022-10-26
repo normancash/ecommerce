@@ -1,30 +1,31 @@
 package com.uam.ecomerce.controller;
 
+import com.uam.ecomerce.model.Rol;
 import com.uam.ecomerce.model.User;
+import com.uam.ecomerce.service.IServiceRol;
 import com.uam.ecomerce.service.IServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
-public class ControllerUser {
+@RequestMapping("/rol")
+public class ControllerRol {
 
+    @Qualifier("serviceRol")
     @Autowired
-    @Qualifier("serviceUser")
-    private IServiceUser serviceUser;
+    private IServiceRol serviceRol;
 
     @GetMapping("list")
-    private List<User> listAll(){
-        return serviceUser.listAll();
+    private List<Rol> listAll(){
+        return serviceRol.listAll();
     }
 
     @PostMapping("/save")
-    private User save(@RequestBody User user) {
-        return serviceUser.save(user);
+    private Rol save(@RequestBody Rol rol) {
+        return serviceRol.save(rol);
     }
 
 }
