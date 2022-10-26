@@ -1,6 +1,5 @@
 package com.uam.ecomerce.controller;
 
-import com.uam.ecomerce.model.Catologo;
 import com.uam.ecomerce.model.ComprobanteCompra;
 import com.uam.ecomerce.service.IServiceComprobantePago;
 import org.springframework.beans.factory.annotation.Autowired;

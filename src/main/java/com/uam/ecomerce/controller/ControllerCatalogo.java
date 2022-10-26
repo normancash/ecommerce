@@ -1,7 +1,7 @@
 package com.uam.ecomerce.controller;
 
-import com.uam.ecomerce.model.Catologo;
-import com.uam.ecomerce.service.IServiceCatologo;
+import com.uam.ecomerce.model.Catalogo;
+import com.uam.ecomerce.service.IServiceCatalogo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -9,21 +9,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/catologo")
-public class ControllerCatologo {
+@RequestMapping("/catalogo")
+public class ControllerCatalogo {
 
-    @Qualifier("serviceCatologo")
+    @Qualifier("serviceCatalogo")
     @Autowired
-    private IServiceCatologo serviceCatologo;
+    private IServiceCatalogo serviceCatologo;
 
     @GetMapping("list")
-    private List<Catologo> listAll(){
+    private List<Catalogo> listAll(){
         return serviceCatologo.listAll();
     }
 
     @PostMapping("/save")
-    private Catologo save(@RequestBody Catologo catologo) {
-        return serviceCatologo.save(catologo);
+    private Catalogo save(@RequestBody Catalogo catalogo) {
+        return serviceCatologo.save(catalogo);
     }
 
 }

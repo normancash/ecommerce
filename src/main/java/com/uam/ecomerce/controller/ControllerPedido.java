@@ -1,8 +1,6 @@
 package com.uam.ecomerce.controller;
 
-import com.uam.ecomerce.model.Catologo;
 import com.uam.ecomerce.model.Pedido;
-import com.uam.ecomerce.service.IServiceCatologo;
 import com.uam.ecomerce.service.IServicePedido;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

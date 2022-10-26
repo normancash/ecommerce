@@ -6,9 +6,9 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name="catologo")
+@Table(name="catalogo")
 @Data
-public class Catologo {
+public class Catalogo {
 
     @Id
     @SequenceGenerator(name = "detalle_seq",

@@ -1,6 +1,5 @@
 package com.uam.ecomerce.service;
 
-import com.uam.ecomerce.model.Catologo;
 import com.uam.ecomerce.model.Pedido;
 import org.springframework.stereotype.Service;
 
