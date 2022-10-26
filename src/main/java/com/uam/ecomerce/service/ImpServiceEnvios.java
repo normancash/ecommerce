@@ -3,11 +3,13 @@ package com.uam.ecomerce.service;
 import com.uam.ecomerce.model.*;
 import com.uam.ecomerce.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Component("serviceEnvios")
 public class ImpServiceEnvios implements IServiceEnvios {
 
     @Autowired

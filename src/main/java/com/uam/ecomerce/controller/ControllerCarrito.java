@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/carrito")
 public class ControllerCarrito {
 
-    @Qualifier("IServiceCarrito")
+    @Qualifier("serviceCarrito")
     @Autowired
     private IServiceCarrito serviceCarrito;
 

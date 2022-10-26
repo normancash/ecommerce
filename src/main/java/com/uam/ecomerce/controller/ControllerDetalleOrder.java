@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/detalleorder")
 public class ControllerDetalleOrder {
 
-    @Qualifier("IServiceDetalleOrder")
+    @Qualifier("serviceDetalleOrder")
     @Autowired
     private IServiceDetalleOrder serviceDetalleOrder;
 

@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/pedido")
 public class ControllerPedido {
 
-    @Qualifier("IServicePedido")
+    @Qualifier("servicePedido")
     @Autowired
     private IServicePedido servicePedido;
 

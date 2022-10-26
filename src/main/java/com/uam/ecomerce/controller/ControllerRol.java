@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/rol")
 public class ControllerRol {
 
-    @Qualifier("IServiceRol")
+    @Qualifier("serviceRol")
     @Autowired
     private IServiceRol serviceRol;
 
