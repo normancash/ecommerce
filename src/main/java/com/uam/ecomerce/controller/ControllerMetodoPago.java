@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/metodopago")
 public class ControllerMetodoPago {
 
-    @Qualifier("IServiceMetodoPago")
+    @Qualifier("serviceMetodoPago")
     @Autowired
     private IServiceMetodoPago serviceMetodoPago;
 

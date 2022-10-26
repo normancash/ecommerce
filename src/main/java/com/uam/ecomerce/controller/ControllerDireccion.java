@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/direccion")
 public class ControllerDireccion {
 
-    @Qualifier("IServiceDireccion")
+    @Qualifier("serviceDireccion")
     @Autowired
     private IServiceDireccion serviceDireccion;
 

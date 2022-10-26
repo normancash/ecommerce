@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/comprobantepago")
 public class ControllerComprobantePago {
 
-    @Qualifier("IServiceComprobantePago")
+    @Qualifier("serviceComprobantePago")
     @Autowired
     private IServiceComprobantePago serviceComprobantePago;
 
