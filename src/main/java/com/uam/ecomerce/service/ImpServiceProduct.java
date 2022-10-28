@@ -42,10 +42,12 @@ public class ImpServiceProduct implements IServiceProduct{
         Path path = Paths.get(ruta + "//" + image.getOriginalFilename());
         if (!Files.exists(path)) {
             Files.write(path,imgByte);
+        }else{
+            Files.deleteIfExists(path);
         }
         ObjectMapper objectMapper = new ObjectMapper();
         Product product = objectMapper.readValue(productDto, Product.class);
-        product.setImagen(image.getOriginalFilename());
+        product.setImage(image.getOriginalFilename());
         return repo.save(product);
     }
 
