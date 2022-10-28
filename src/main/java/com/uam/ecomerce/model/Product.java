@@ -4,6 +4,7 @@ package com.uam.ecomerce.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.awt.*;
 import java.util.UUID;
 
 @Entity
@@ -12,16 +13,17 @@ import java.util.UUID;
 public class Product {
 
     @Id
-    @SequenceGenerator(name = "product_seq",
-            sequenceName = "product_seq",
-            allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "product_seq")
+    @GeneratedValue
     private UUID id_product;
+
     private String name;
+
     private String description;
-    private String imagen;
+
     private Float price;
+
+    private String image;
+
     private int stock;
 
 }
