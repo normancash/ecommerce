@@ -23,7 +23,8 @@ public class DetalleOrder {
     private int count;
 
 
-   // private Long idOrder;
+    //private Order order;
+    //private Long idOrder;
 
     @ManyToOne
     @JoinColumn(name="id_order")
