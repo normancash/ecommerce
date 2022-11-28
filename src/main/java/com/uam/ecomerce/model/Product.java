@@ -26,9 +26,9 @@ public class Product {
 
     private boolean display;
 
-   /* @ManyToOne
+    @ManyToOne
     @JoinColumn(name="id_category")
-    private Category category;*/
+    private Category category;
 
     private float price;
 
