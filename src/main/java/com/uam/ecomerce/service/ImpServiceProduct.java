@@ -54,5 +54,15 @@ public class ImpServiceProduct implements IServiceProduct{
         repo.deleteById(id);
     }
 
+    @Override
+    public Product saveProductJson(Product product) {
+        return repo.save(product);
+    }
+
+    @Override
+    public List<Product> getProductDisplay() {
+        return repo.getProductDisplay();
+    }
+
 
 }

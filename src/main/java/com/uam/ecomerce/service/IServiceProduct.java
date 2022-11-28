@@ -19,4 +19,8 @@ public interface IServiceProduct {
             throws IOException;
 
     public void deleteProduct(Long id);
+
+    Product saveProductJson(Product product);
+
+    List<Product> getProductDisplay();
 }

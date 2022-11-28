@@ -22,4 +22,10 @@ public class Product {
 
     private String imagen;
 
+    private int quantity;
+
+    private boolean display;
+
+
+
 }

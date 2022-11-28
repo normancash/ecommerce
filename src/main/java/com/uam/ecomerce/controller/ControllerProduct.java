@@ -12,16 +12,26 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/product")
-@CrossOrigin
+@CrossOrigin("*")
 public class ControllerProduct {
 
     @Qualifier("serviceProduct")
     @Autowired
     private IServiceProduct service;
 
-    @GetMapping("/list")
+    @GetMapping("/listAll")
     public List<Product> getAll() {
         return service.getListProduct();
+    }
+
+    @GetMapping("/list")
+    public List<Product> getProductDisplay() {
+        return service.getProductDisplay();
+    }
+
+    @PostMapping("/saveJson")
+    public Product saveProductJson(@RequestBody Product product) {
+        return service.saveProductJson(product);
     }
 
 
