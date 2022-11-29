@@ -31,6 +31,11 @@ public class ImpServiceProduct implements IServiceProduct{
     }
 
     @Override
+    public List<Product> getListProductDisplay() {
+        return repo.getProduct();
+    }
+
+    @Override
     public Product findById(Long id) {
         return repo.findById(id).get();
     }

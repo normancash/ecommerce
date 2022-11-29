@@ -12,6 +12,7 @@ public interface IServiceProduct {
 
     public List<Product> getListProduct();
 
+    public List<Product> getListProductDisplay();
 
     public Product findById(Long id);
 

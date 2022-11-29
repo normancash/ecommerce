@@ -13,8 +13,12 @@ import java.util.UUID;
 public class Product {
 
     @Id
-    @GeneratedValue
-    private UUID id_product;
+    @SequenceGenerator(name = "product_seq",
+            sequenceName = "product_seq",
+            allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "product_seq")
+    private Long id;
 
     private String name;
 
@@ -24,6 +28,9 @@ public class Product {
 
     private String image;
 
-    private int stock;
+    private int cant;
 
+    private boolean display;
 }
+
+
