@@ -45,6 +45,10 @@ public class ControllerProduct {
        return service.findById(id);
     }
 
+    @GetMapping("/listProduct/{idCategory}")
+    public List<Product> getAll(@PathVariable Long idCategory) {
+        return service.getListProduct(idCategory);
+    }
     @DeleteMapping("/delete/{id}")
     public void deleteProduct(@PathVariable Long id) {
         service.deleteProduct(id);

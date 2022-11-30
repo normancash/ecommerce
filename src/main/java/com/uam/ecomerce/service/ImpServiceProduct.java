@@ -64,5 +64,10 @@ public class ImpServiceProduct implements IServiceProduct{
         return repo.getProductDisplay();
     }
 
+    @Override
+    public List<Product> getListProduct(Long idCategory) {
+        return repo.getListProduct(idCategory);
+    }
+
 
 }

@@ -23,4 +23,6 @@ public interface IServiceProduct {
     Product saveProductJson(Product product);
 
     List<Product> getProductDisplay();
+
+    List<Product> getListProduct(Long idCategory);
 }
