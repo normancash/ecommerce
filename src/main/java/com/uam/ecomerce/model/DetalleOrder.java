@@ -22,12 +22,8 @@ public class DetalleOrder {
 
     private int count;
 
-
-    //private Order order;
-    //private Long idOrder;
-
-    @ManyToOne
-    @JoinColumn(name="id_order")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id_order",nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Order order;
 
