@@ -46,4 +46,5 @@ public class Order {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private List<DetalleOrder> detalles = new ArrayList<>();
 
+    private String numberCard;
 }
