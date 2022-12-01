@@ -15,10 +15,8 @@ public class PathConfigurate implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         WebMvcConfigurer.super.addResourceHandlers(registry);
         registry.addResourceHandler("/Img/**")
-                .addResourceLocations("file:/C:/Recursos/Img");
+                .addResourceLocations("file:/C:/Users/carlo/proyectos/B-Fashion/ecomerce-react_b-fashion/src/assets");
     }
-
-
 
     /*@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

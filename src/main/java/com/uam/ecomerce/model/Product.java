@@ -4,8 +4,6 @@ package com.uam.ecomerce.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.awt.*;
-import java.util.UUID;
 
 @Entity
 @Data
