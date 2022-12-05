@@ -1,8 +1,10 @@
 package com.uam.ecomerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,13 +19,16 @@ public class Order {
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "order_seq")
-    private UUID id_order;
+    private Integer id_order;
 
     private String name;
 
     private double total;
 
-    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
-    private List<DetalleOrder> detalles;
+    @OneToMany(mappedBy = "order",
+            cascade  = CascadeType.ALL,fetch = FetchType.LAZY
+    )
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private List<DetalleOrder> detalles = new ArrayList<>();
 
 }

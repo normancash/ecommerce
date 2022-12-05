@@ -17,7 +17,7 @@ public class DetalleOrder {
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "detalle_seq")
-    private UUID id_detalle_order;
+    private Integer id_detalle_order;
 
     private Long id_Producto;
 
@@ -26,8 +26,8 @@ public class DetalleOrder {
 
    // private Long idOrder;
 
-    @ManyToOne
-    @JoinColumn(name="id_order")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id_order",nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Order order;
 
