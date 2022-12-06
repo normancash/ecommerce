@@ -16,13 +16,16 @@ public class ControllerUser {
     private IServiceUser serviceUser;
 
     @GetMapping("list")
-    private List<User> listAll(){
+    public List<User> listAll(){
         return serviceUser.listAll();
     }
 
     @PostMapping("/save")
-    private User save(@RequestBody User user) {
+    public User save(@RequestBody User user) {
         return serviceUser.save(user);
     }
+
+
+
 
 }
